@@ -1,6 +1,6 @@
 <?php
 
-$searchinput = $_GET['search'];
+$searchinput = $_GET['searchin'];
 
 $tv = glob('./tv/*.*');
 $games = glob('./games/*.*');
