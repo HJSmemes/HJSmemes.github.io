@@ -18,8 +18,8 @@ function search() {
         } else if (searchinput == "Ok Boomer" || searchinput == "okboomer" || searchinput == "OkBoomer" || searchinput == "Okboomer" || searchinput == "okBoomer" || searchinput == "Ok boomer" || searchinput == "ok Boomer"){
         document.getElementById("demo").innerHTML = "</P><iframe src='./files/data/estr/wellimdoinganotheronesoyoucanseestuff.easter' frameborder='0' height='42' width='95%'></iframe><P>";
         } else {
-        $('#phpresult').load('hjsmemes.github.io/files/data/search/search.php?search=' + searchinput);
-        document.getElementById("result").innerHTML = phpresult;
+        $('#result').load('hjsmemes.github.io/files/data/search/search.php?search=' + searchinput);
+        //document.getElementById("result").innerHTML = phpresult;
         //document.getElementById("demo").innerHTML = "No results found.";
         }
 }
