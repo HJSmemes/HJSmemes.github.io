@@ -7,19 +7,19 @@ $games = glob('./games/*.*');
 $gen = glob('./general/*.*');
 foreach($tv as $tvf) {
 if ($tvf == $searchinput) {
-return $tvf;
+echo $tvf;
 }
 }
 foreach($games as $gamesf) {
 if ($gamesf == $searchinput) {
-return $gamesf;
+echo $gamesf;
 }
 }
 foreach($gen as $genf) {
 if ($genf == $searchinput) {
-return $genf;
+echo $genf;
 }
 }
-return "No results found.";
+echo "No results found.";
 
 ?>
