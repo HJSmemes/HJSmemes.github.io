@@ -1,4 +1,4 @@
-<?php
+<script language="php">
 
 $searchinput = $_GET['searchin'];
 
@@ -22,4 +22,4 @@ echo $genf;
 }
 echo "No results found.";
 
-?>
+</script>
