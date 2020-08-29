@@ -1,17 +1,17 @@
 function readCat() {
-getFileAsString("./files/memes/games/MEMELIST.txt")
+var resA = getFileAsString("./files/memes/games/MEMELIST.txt")
 var gamecatlistT = resultx.split("\n");
 window.gamecatlist = [];
 for(memename in gamecatlistT) {
   window.gamecatlist.push("games/".concat(memename))
 }
-getFileAsString("./files/memes/general/MEMELIST.txt")
+var resB = getFileAsString("./files/memes/general/MEMELIST.txt")
 var gencatlistT = resultx.split("\n");
 window.gencatlist = [];
 for(memename in gencatlistT) {
   window.gencatlist.push("genaral/".concat(memename))
 }
-getFileAsString("./files/memes/tv/MEMELIST.txt")
+var resC = getFileAsString("./files/memes/tv/MEMELIST.txt")
 var tvcatlistT = resultx.split("\n");
 window.tvcatlist = [];
 for(memename in tvcatlistT) {
