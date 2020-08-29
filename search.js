@@ -22,7 +22,7 @@ function search() {
         readCat();
         window.matchlist = [];
         for(memen in window.allcatlist) {
-        if memen.includes(searchinput) {
+        if (memen.includes(searchinput)) {
           window.matchlist.concat(memen);
         }
         }
