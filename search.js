@@ -1,3 +1,4 @@
+//requires "3EGaming.github.io/files/js/readfile.js" and "3EGaming.github.io/files/js/preview_display.js" and "hjsmemes.github.io/files/data/js/readcat.js"
 function search() {
 	var searchinput = document.getElementById('searchinput').value;
 	if (searchinput == "logo") {
@@ -13,13 +14,23 @@ function search() {
         } else if (searchinput == "meme" || searchinput == "memes"){
         alert("You'll have to be more specific than that");
         } else if (searchinput == "lenny" || searchinput == "Lenny"){
-        document.getElementById("demo").innerHTML = "</P><iframe src='./files/data/estr/iwhenttomoretroubblethanishouldhavetomakethisworksobegratefull.easter' frameborder='0' height='42' width='95%'></iframe><P>";
+        document.getElementById("demo").innerHTML = "</P><iframe src='./files/data/estr/iwhenttomoretroubblethanishouldhavetomakethisworksobegratefull.easter.txt' frameborder='0' height='42' width='95%'></iframe><P>";
         alert("Are you sure you want to summon Lenny? (You don't have a choice.)");
         } else if (searchinput == "Ok Boomer" || searchinput == "okboomer" || searchinput == "OkBoomer" || searchinput == "Okboomer" || searchinput == "okBoomer" || searchinput == "Ok boomer" || searchinput == "ok Boomer"){
-        document.getElementById("demo").innerHTML = "</P><iframe src='./files/data/estr/wellimdoinganotheronesoyoucanseestuff.easter' frameborder='0' height='42' width='95%'></iframe><P>";
+        document.getElementById("demo").innerHTML = "</P><iframe src='./files/data/estr/wellimdoinganotheronesoyoucanseestuff.easter.txt' frameborder='0' height='42' width='95%'></iframe><P>";
         } else {
-        $('#result').load('./files/data/search/search.php?searchin="' + searchinput + '"');
-        //document.getElementById("result").innerHTML = phpresult;
-        //document.getElementById("demo").innerHTML = "No results found.";
+        readCat();
+        window.matchlist = [];
+        for(memen in window.allcatlist) {
+        if memen.includes(searchinput) {
+          window.matchlist.concat(memen);
+        }
+        }
+        displayPreviews(window.matchlist);
+        if (not window.matchlist == []) {
+          document.getElementById("result").innerHTML = "</P>".concat(window.resulte, "<P>");
+        } else {
+          document.getElementById("demo").innerHTML = "No results found.";
+        }
         }
 }
