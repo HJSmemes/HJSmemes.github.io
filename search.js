@@ -26,11 +26,11 @@ function search() {
           window.matchlist.concat(memen);
         }
         }
-        displayPreviews(window.matchlist);
-        if (not window.matchlist == []) {
-          document.getElementById("result").innerHTML = "</P>".concat(window.resulte, "<P>");
-        } else {
+        if (window.matchlist == []) {
           document.getElementById("demo").innerHTML = "No results found.";
+        } else {
+          displayPreviews(window.matchlist);
+          document.getElementById("result").innerHTML = window.resulte;
         }
         }
 }
